@@ -1,0 +1,39 @@
+{ pkgs, ... }:
+
+with pkgs; [
+	wget
+	vscode
+	git
+	lazygit
+	micro
+	kitty
+	alacritty
+	fastfetch
+	btop
+	fzf
+	oh-my-zsh
+	oh-my-posh
+	zoxide
+	zsh
+	waypaper
+    rofi-wayland
+    waybar
+    gnome-icon-theme
+    swww
+	vesktop
+	chezmoi
+	mako
+	libnotify
+	grim
+	grimblast
+    networkmanagerapplet
+	swappy
+	cliphist
+	wofi
+	hyprlock
+	wlogout
+	wl-clipboard
+	jq
+	imagemagick
+	spotify
+]
