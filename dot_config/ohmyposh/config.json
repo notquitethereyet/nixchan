@@ -1,0 +1,115 @@
+{
+    "final_space": true,
+    "version": 3,
+    "blocks": [
+      {
+        "alignment": "left",
+        "newline": true,
+        "type": "prompt",
+        "segments": [
+          {
+            "background": "",
+            "foreground": "p:os",
+            "style": "plain",
+            "template": "{{.Icon}} ",
+            "type": "os"
+          },
+          {
+            "background": "",
+            "foreground": "p:blue",
+            "style": "plain",
+            "template": "{{ .UserName }}@{{ .HostName }} ",
+            "type": "session"
+          },
+          {
+            "background": "transparent",
+            "foreground": "p:pink",
+            "style": "plain",
+            "template": "{{ .Path }} ",
+            "type": "path",
+            "properties": {
+              "folder_icon": "....",
+              "home_icon": "~",
+              "style": "full"
+            }
+          },
+          {
+            "background": "",
+            "foreground": "p:lavender",
+            "style": "plain",
+            "template": " {{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }} <p:blue>{{ if gt .Behind 0 }}⇣{{ end }}{{ if gt .Ahead 0 }}⇡{{ end }}</>",
+            "type": "git",
+            "properties": {
+              "branch_icon": " ",
+              "cherry_pick_icon": " ",
+              "commit_icon": " ",
+              "fetch_status": true,
+              "fetch_upstream_icon": false,
+              "merge_icon": " ",
+              "no_commits_icon": " ",
+              "rebase_icon": " ",
+              "revert_icon": " ",
+              "tag_icon": " "
+            }
+          }
+        ]
+      },
+      {
+        "overflow": "hidden",
+        "type": "rprompt",
+        "segments": [
+          {
+            "background": "transparent",
+            "foreground": "p:yellow",
+            "style": "plain",
+            "template": "{{ .FormattedMs }}",
+            "type": "executiontime",
+            "properties": {
+              "threshold": 500
+            }
+          }
+        ]
+      },
+      {
+        "alignment": "left",
+        "newline": true,
+        "type": "prompt",
+        "segments": [
+          {
+            "background": "",
+            "foreground": "p:pink",
+            "foreground_templates": [
+              "{{if gt .Code 0}}p:red{{end}}",
+              "{{if gt .Code 0}}p:pink{{end}}"
+            ],
+            "style": "plain",
+            "template": "❯ ",
+            "type": "text"
+          }
+        ]
+      }
+    ],
+    "palette": {
+      "blue": "#89B4FA",
+      "closer": "p:os",
+      "lavender": "#B4BEFE",
+      "os": "#ACB0BE",
+      "pink": "#F5C2E7",
+      "red": "##f38ba8",
+      "yellow": "#f9e2af"
+    },
+    "secondary_prompt": {
+      "background": "transparent",
+      "foreground": "p:pink",
+      "template": "❯❯ "
+    },
+    "transient_prompt": {
+      "background": "transparent",
+      "foreground": "p:pink",
+      "foreground_templates": [
+        "{{if gt .Code 0}}p:red{{end}}",
+        "{{if gt .Code 0}}p:pink{{end}}"
+      ],
+      "template": "❯ "
+    }
+  }

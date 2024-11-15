@@ -11,10 +11,7 @@ with pkgs; [
 	fastfetch
 	btop
 	fzf
-	oh-my-zsh
-	oh-my-posh
 	zoxide
-	zsh
 	waypaper
     rofi-wayland
     waybar
@@ -36,4 +33,7 @@ with pkgs; [
 	jq
 	imagemagick
 	spotify
+	eza
+	brightnessctl
+	hyprutils
 ]

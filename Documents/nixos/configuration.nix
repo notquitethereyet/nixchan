@@ -53,8 +53,14 @@
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
-  # services.displayManager.sddm.wayland.enable = true;
   services.desktopManager.plasma6.enable = true;
+  services.displayManager.sddm.catppuccin.enable = true;
+  services.displayManager.sddm.catppuccin.background = "/home/quiet/.cache/sddm.jpg";
+  services.displayManager.sddm.settings = {
+    General = {
+      InputMethod="";
+    };
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -62,6 +68,16 @@
     variant = "";
   };
 
+  hardware = {
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
+    bluetooth = {
+      enable = true;
+      powerOnBoot = false;
+    };
+  };
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
@@ -92,13 +108,17 @@
     packages = with pkgs; [
       kdePackages.kate
     ];
-    shell = pkgs.zsh;
   };
 
   # Install firefox.
   programs.firefox.enable = true;
-  programs.zsh.enable = true;
   
+
+  environment.shells = with pkgs; [ zsh ];
+  users.defaultUserShell = pkgs.zsh;
+  programs.zsh.enable = true;
+
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 

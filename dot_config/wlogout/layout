@@ -29,7 +29,7 @@
 
 {
     "label" : "hibernate",
-    "action" : "systemctl hibernate",
+    "action" : "hyprlock & disown && systemctl hibernate",
     "text" : "Hibernate",
     "keybind" : "h"
 }
