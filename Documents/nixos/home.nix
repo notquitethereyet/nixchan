@@ -1,5 +1,7 @@
-{ config, pkgs, inputs, ... }:
-
+{ config, pkgs, system, inputs, ... }:
+# let
+#   system = "x86_64-linux";
+#  in
 {
   # TODO please change the username & home directory to your own
   home.username = "quiet";
@@ -30,7 +32,7 @@
   home.packages = with pkgs; [
     # here is some command line tools I use frequently
     # feel free to add your own or remove some of them
-
+    # inputs.zen-browser.packages."${config.system.system}".specific
     # archives
     zip
     xz
@@ -38,6 +40,7 @@
     p7zip
     oh-my-zsh
 	  oh-my-posh
+    inputs.zen-browser.packages."${system}".specific
   ];
 
   # basic configuration of git, please change to your own
@@ -49,6 +52,7 @@
         init.defaultBranch = "main";
     };
   };
+
 
   # oh-my-zsh = {
   #   enable = true;
