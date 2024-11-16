@@ -62,6 +62,17 @@
     };
   };
 
+#   services.displayManager.sddm = {
+#   wayland.enable = true;
+#   enable = true;
+#   theme = "catppuccin-mocha";
+#   settings = {
+#     General = {
+#       InputMethod="";
+#     };
+#   };
+# };
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
