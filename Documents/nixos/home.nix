@@ -27,23 +27,20 @@
 #     "Xcursor.size" = 16;
 #     "Xft.dpi" = 172;
 #   };
-
+  imports = [
+    ./zsh.nix
+  ];
   # Packages that should be installed to the user profile.
   home.packages = with pkgs; [
-    # here is some command line tools I use frequently
-    # feel free to add your own or remove some of them
-    # inputs.zen-browser.packages."${config.system.system}".specific
-    # archives
     zip
     xz
     unzip
     p7zip
-    oh-my-zsh
+    zplug
 	  oh-my-posh
     inputs.zen-browser.packages."${system}".specific
   ];
 
-  # basic configuration of git, please change to your own
   programs.git = {
     enable = true;
     userName = "notquitethereyet";
@@ -53,31 +50,6 @@
     };
   };
 
-
-  # oh-my-zsh = {
-  #   enable = true;
-  #   plugins = [ "git" "sudo" "zsh-256color" "zsh-autosuggestions" "zsh-syntax-highlighting" "fast-syntax-highlighting"  "zsh-autocomplete" ];
-  # };
-
-  # programs.oh-my-posh = {
-  #   enable = true;
-  #   enableZshIntegration = true;
-  # };
-
-
-
-  # programs.zsh = {
-  #   enable = true;
-  #   dotDir = ".config/zsh";
-  #   enableAutosuggestions = true;
-  #   enableCompletion = true;
-  #   initExtra = "${builtins.readFile ./config/zsh/.zshrc}";
-  #   oh-my-zsh = {
-  #     enable = true;
-  #     plugins = [ "git" "sudo" "zsh-256color" "zsh-autosuggestions" "zsh-syntax-highlighting" "fast-syntax-highlighting"  "zsh-autocomplete" ];
-  #     theme = "robbyrussell";
-  #   };
-  # };
 
   # Catpussy thing
   catppuccin = {

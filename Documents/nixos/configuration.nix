@@ -55,7 +55,7 @@
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
   services.displayManager.sddm.catppuccin.enable = true;
-  services.displayManager.sddm.catppuccin.background = "/home/quiet/.cache/sddm.jpg";
+  services.displayManager.sddm.catppuccin.background = "./assets/sddm.jpg";
   services.displayManager.sddm.settings = {
     General = {
       InputMethod="";
