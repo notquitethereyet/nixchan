@@ -36,4 +36,6 @@ with pkgs; [
 	eza
 	brightnessctl
 	hyprutils
+	fprintd
+	python3
 ]

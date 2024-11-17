@@ -28,12 +28,14 @@ programs.zsh = {
     la = "${pkgs.eza}/bin/eza -lbhHigmuSa --time-style=long-iso --git --color-scale --group-directories-first --icons";
     lx = "${pkgs.eza}/bin/eza -lbhHigmuSa@ --time-style=long-iso --git --color-scale --group-directories-first --icons";
     # lt = "${pkgs.eza}/bin/eza --tree --level=2 --group-directories-first --icons";
+    
+    nixgit  = "/home/quiet/.config/hypr/scripts/chezmoi.sh";
     vc="code"; # gui code editor
     lsblk = "lsblk -o name,mountpoint,label,size,type,uuid";
 
-    rebuild = "/home/quiet/.config/hypr/scripts/nixos_manager.sh rebuild";
-    update = "/home/quiet/.config/hypr/scripts/nixos_manager.sh update";
-    cleanup = "/home/quiet/.config/hypr/scripts/nixos_manager.sh gc";
+    rebuild = "/home/quiet/.config/hypr/scripts/nix.sh rebuild";
+    update = "/home/quiet/.config/hypr/scripts/nix.sh update";
+    cleanup = "/home/quiet/.config/hypr/scripts/nix.sh gc";
     nixconf = "code /home/quiet/Documents/nixos/";
     mkdir = "mkdir -p";
 
@@ -71,11 +73,6 @@ programs.zsh = {
       { name = "zsh-users/zsh-history-substring-search"; }
       { name = "chrissicool/zsh-256color"; }
       { name = ""; }
-
-    #   {
-    #     name = "romkatv/powerlevel10k";
-    #     tags = [ "as:theme" "depth:1" ];
-    #   }
 
     ];
   };
