@@ -36,6 +36,12 @@ with pkgs; [
 	eza
 	brightnessctl
 	hyprutils
-	fprintd
+	mpd
+	playerctl
 	python3
+	nwg-look
+	glib
+	dconf
+	gsettings-desktop-schemas
+	obs-studio
 ]
