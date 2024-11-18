@@ -38,7 +38,6 @@ with pkgs; [
 	hyprutils
 	mpd
 	playerctl
-	python3
 	nwg-look
 	glib
 	dconf
