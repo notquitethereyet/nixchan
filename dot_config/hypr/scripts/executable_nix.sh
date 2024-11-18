@@ -15,7 +15,7 @@ nixos_rebuild() {
 nixos_update_and_rebuild() {
   currentdir=$(pwd)
   cd /home/quiet/Documents/nixos/
-  nix flake update
+  sudo nix flake update
   # git add .
   # git commit -m "update and rebuild"
   sudo nixos-rebuild switch

@@ -43,4 +43,8 @@ with pkgs; [
 	dconf
 	gsettings-desktop-schemas
 	obs-studio
+	slurp
+	github-desktop
+	postman
+	zapzap
 ]
