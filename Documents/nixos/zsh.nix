@@ -37,6 +37,7 @@ programs.zsh = {
     update = "/home/quiet/.config/hypr/scripts/nix.sh update";
     cleanup = "/home/quiet/.config/hypr/scripts/nix.sh gc";
     nixconf = "code /home/quiet/Documents/nixos/";
+    hyprconf = "code /home/quiet/.config/hypr/";
     mkdir = "mkdir -p";
 
     # dl = "yt-dlp";
