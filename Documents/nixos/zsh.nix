@@ -33,9 +33,15 @@ programs.zsh = {
     vc="code"; # gui code editor
     lsblk = "lsblk -o name,mountpoint,label,size,type,uuid";
 
-    rebuild = "/home/quiet/.config/hypr/scripts/nix.sh rebuild";
-    update = "/home/quiet/.config/hypr/scripts/nix.sh update";
-    cleanup = "/home/quiet/.config/hypr/scripts/nix.sh gc";
+    # rebuild = "/home/quiet/.config/hypr/scripts/nix.sh rebuild";
+    # update = "/home/quiet/.config/hypr/scripts/nix.sh update";
+    # cleanup = "/home/quiet/.config/hypr/scripts/nix.sh gc";
+
+    rebuild = "nh os switch --ask";
+    update = "nh os switch -u --ask";
+    cleanup = "nh clean all --keep-since 7d --ask";
+
+
     nixconf = "code /home/quiet/Documents/nixos/";
     hyprconf = "code /home/quiet/.config/hypr/";
     mkdir = "mkdir -p";

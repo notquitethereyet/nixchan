@@ -69,7 +69,7 @@
   	enable = true;
   	clean.enable = true;
   	# flake = "/home/quiet/Documents/nixos/";
-  	# clean.extraArgs = "--keep-since 7d --keep 5";
+  	clean.extraArgs = "--keep-since 7d --keep 10";
   };
 
   environment.sessionVariables = {
