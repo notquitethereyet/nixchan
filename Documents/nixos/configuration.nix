@@ -15,6 +15,12 @@
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.configurationLimit = 10;
 
+  # Storage Optimization
+  nix.settings.auto-optimise-store = true;
+
+
+
+
   networking.hostName = "nixchan"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -27,14 +33,7 @@
 
   # Set your time zone.
   time.timeZone = "America/Los_Angeles";
-
-  # Select internationalisation properties.
   i18n.defaultLocale = "en_US.UTF-8";
-
-
-  # Storage Optimization
-  nix.settings.auto-optimise-store = true;
-
   i18n.extraLocaleSettings = {
     LC_ADDRESS = "en_US.UTF-8";
     LC_IDENTIFICATION = "en_US.UTF-8";
@@ -64,16 +63,18 @@
 
 
   programs.dconf.enable = true; 
-#   services.displayManager.sddm = {
-#   wayland.enable = true;
-#   enable = true;
-#   theme = "catppuccin-mocha";
-#   settings = {
-#     General = {
-#       InputMethod="";
-#     };
-#   };
-# };
+
+  ## Yet another nix helper
+  programs.nh = {
+  	enable = true;
+  	clean.enable = true;
+  	# flake = "/home/quiet/Documents/nixos/";
+  	# clean.extraArgs = "--keep-since 7d --keep 5";
+  };
+
+  environment.sessionVariables = {
+  	FLAKE = "/home/quiet/Documents/nixos";
+  };
 
   # Configure keymap in X11
   services.xserver.xkb = {
@@ -126,19 +127,11 @@
   # Install firefox.
   programs.firefox.enable = true;
   
-  services.fprintd = {
-  enable = true;
-  # package = pkgs.fprintd-tod;
-  # tod = {
-  #   enable = true;
-  #   driver = pkgs.libfprint-2-tod1-goodix;
-  #   };
-  };
 
   environment.shells = with pkgs; [ zsh ];
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
-
+  
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

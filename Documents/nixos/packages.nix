@@ -47,4 +47,6 @@ with pkgs; [
 	github-desktop
 	postman
 	zapzap
+	direnv
+	nh
 ]

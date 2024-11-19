@@ -21,6 +21,7 @@
       modules = [
       ./configuration.nix
       ./hyprland.nix
+      ./gamer.nix
       ./fonts.nix
       catppuccin.nixosModules.catppuccin
       home-manager.nixosModules.home-manager
