@@ -49,4 +49,5 @@ with pkgs; [
 	zapzap
 	direnv
 	nh
+	code-cursor
 ]

@@ -30,7 +30,6 @@ programs.zsh = {
     # lt = "${pkgs.eza}/bin/eza --tree --level=2 --group-directories-first --icons";
     
     nixgit  = "/home/quiet/.config/hypr/scripts/chezmoi.sh";
-    vc="code"; # gui code editor
     lsblk = "lsblk -o name,mountpoint,label,size,type,uuid";
 
     rebuild = "/home/quiet/.config/hypr/scripts/nix.sh rebuild";
@@ -42,8 +41,8 @@ programs.zsh = {
     nhgc = "nh clean all --keep-since 7d --ask";
 
 
-    nixconf = "code /home/quiet/Documents/nixos/";
-    hyprconf = "code /home/quiet/.config/hypr/";
+    nixconf = "cursor /home/quiet/Documents/nixos/";
+    hyprconf = "cursor /home/quiet/.config/hypr/";
     mkdir = "mkdir -p";
 
     # dl = "yt-dlp";

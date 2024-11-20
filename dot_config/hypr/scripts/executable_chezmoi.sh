@@ -16,7 +16,7 @@ files=(
     "/home/quiet/.config/waypaper"
     "/home/quiet/.config/wlogout"
     "/home/quiet/.config/mako"
-    "/home/quiet/.config/code-flags.conf"
+    "/home/quiet/.config/electron-flags.conf"
     "/home/quiet/.config/qt5ct"
     "/home/quiet/.themes"
 )
