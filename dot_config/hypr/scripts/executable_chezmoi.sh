@@ -7,6 +7,7 @@ files=(
     "/home/quiet/.weatherapikey"
     "/home/quiet/vesktop.json"
     "/home/quiet/.config/fastfetch"
+    "/home/quiet/.config/kitty"
     "/home/quiet/.config/hypr"
     "/home/quiet/.config/ohmyposh"
     "/home/quiet/.config/rofi"

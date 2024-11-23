@@ -142,9 +142,12 @@
   # environment.systemPackages = with pkgs; import ./packages.nix { inherit pkgs; };
 
 
-  environment.systemPackages = with pkgs; (import ./packages.nix { inherit pkgs; }) ++ [
-  (import ./python.nix { inherit pkgs; }).pythonEnv
-];
+  environment.systemPackages = with pkgs; 
+    (import ./packages.nix { inherit pkgs; }) ++ 
+    (import ./dev.nix { inherit pkgs; }) ++
+    [
+      (import ./python.nix { inherit pkgs; }).pythonEnv
+    ];
 
 
 

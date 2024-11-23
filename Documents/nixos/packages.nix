@@ -2,9 +2,6 @@
 
 with pkgs; [
 	wget
-	vscode
-	git
-	lazygit
 	micro
 	kitty
 	alacritty
@@ -13,17 +10,17 @@ with pkgs; [
 	fzf
 	zoxide
 	waypaper
-    rofi-wayland
-    waybar
-    gnome-icon-theme
-    swww
+	rofi-wayland
+	waybar
+	gnome-icon-theme
+	swww
 	vesktop
 	chezmoi
 	mako
 	libnotify
 	grim
 	grimblast
-    networkmanagerapplet
+	networkmanagerapplet
 	swappy
 	cliphist
 	wofi
@@ -44,11 +41,11 @@ with pkgs; [
 	gsettings-desktop-schemas
 	obs-studio
 	slurp
-	github-desktop
 	postman
 	zapzap
 	direnv
 	nh
 	code-cursor
 	pavucontrol
+	neovim
 ]
