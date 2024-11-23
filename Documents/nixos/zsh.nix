@@ -41,8 +41,8 @@ programs.zsh = {
     nhgc = "nh clean all --keep-since 7d --ask";
 
 
-    nixconf = "cursor /home/quiet/Documents/nixos/";
-    hyprconf = "cursor /home/quiet/.config/hypr/";
+    nixconf = "code /home/quiet/Documents/nixos/";
+    hyprconf = "code /home/quiet/.config/hypr/";
     mkdir = "mkdir -p";
 
     # dl = "yt-dlp";
