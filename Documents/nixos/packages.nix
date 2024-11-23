@@ -50,4 +50,5 @@ with pkgs; [
 	direnv
 	nh
 	code-cursor
+	pavucontrol
 ]
