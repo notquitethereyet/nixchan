@@ -30,7 +30,7 @@
   ],
   "custom/launcher": {
     "tootltip": false,
-    "format": " 󰣇",
+    "format": " 󱄅",
     "on-click": "pkill -x rofi || ~/.config/hypr/scripts/rofilaunch.sh",
     "on-click-right": "killall wofi"
   },
