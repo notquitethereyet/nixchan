@@ -1,6 +1,6 @@
 { pkgs, ... }: {
   fonts.packages = with pkgs; [
-    nerdfonts
+    nerd-fonts.fira-code
     noto-fonts
     noto-fonts-extra
     noto-fonts-cjk-sans
