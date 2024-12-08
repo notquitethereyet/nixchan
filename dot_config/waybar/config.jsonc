@@ -93,8 +93,7 @@
   },
   "custom/waybar-mpris": {
     "return-type": "json",
-    "exec": "waybar-mpris --position --autofocus",
-    "on-click": "waybar-mpris --send toggle",
+    "exec": "waybar-mpris --position --autofocus --play ▶ --pause ",    "on-click": "waybar-mpris --send toggle",
     // This option will switch between players on right click.
         "on-click-right": "waybar-mpris --send player-next",
     // The options below will switch the selected player on scroll
