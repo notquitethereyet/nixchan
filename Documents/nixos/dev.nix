@@ -9,4 +9,5 @@ with pkgs; [
     git
     lazygit
     gcc
+    neovim
 ]

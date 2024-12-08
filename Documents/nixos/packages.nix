@@ -46,6 +46,6 @@ with pkgs; [
 	direnv
 	nh
 	code-cursor
-	pavucontrol
-	neovim
+	pavucontrolko
+	waybar-mpris
 ]
