@@ -20,17 +20,22 @@
 
       modules = [
       ./configuration.nix
-      ./hyprland.nix
-      ./gamer.nix
-      ./fonts.nix
-      catppuccin.nixosModules.catppuccin
+      ./hardware-configuration.nix
+      ./modules/users.nix
+      ./modules/services/desktop.nix
+      ./modules/services/network.nix
+      ./modules/services/gaming.nix
+      ./modules/fonts.nix
+      ./modules/dev.nix
+      ./modules/packages.nix
+      ./modules/hyprland.nix
       home-manager.nixosModules.home-manager
             {
               home-manager.useGlobalPkgs = true;
               home-manager.backupFileExtension = "HMBackup";
               home-manager.useUserPackages = true;
               home-manager.users.quiet.imports = [
-                ./home.nix
+                ./hosts/nixchan/home.nix
                 catppuccin.homeManagerModules.catppuccin
               ];
               home-manager.extraSpecialArgs = { inherit inputs; system = "x86_64-linux";};

@@ -1,0 +1,49 @@
+{ pkgs, ... }:
+
+{
+  environment.systemPackages = with pkgs; [
+    wget
+    micro
+    kitty
+    alacritty
+    fastfetch
+    btop
+    fzf
+    zoxide
+    waypaper
+    rofi-wayland
+    waybar
+    gnome-icon-theme
+    swww
+    vesktop
+    chezmoi
+    mako
+    libnotify
+    grim
+    grimblast
+    networkmanagerapplet
+    swappy
+    cliphist
+    wofi
+    hyprlock
+    wlogout
+    wl-clipboard
+    jq
+    imagemagick
+    spotify
+    eza
+    brightnessctl
+    hyprutils
+    mpd
+    playerctl
+    nwg-look
+    glib
+    dconf
+    gsettings-desktop-schemas
+    obs-studio
+    slurp
+    zapzap
+    nh
+    pavucontrol
+  ];
+}
