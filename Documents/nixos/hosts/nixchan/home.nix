@@ -18,7 +18,7 @@
     p7zip
     zplug
 	  oh-my-posh
-    inputs.zen-browser.packages."${system}".specific
+    inputs.zen-browser.packages."${system}".default
   ];
 
   programs.git = {
