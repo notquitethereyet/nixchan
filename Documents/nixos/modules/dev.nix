@@ -1,14 +1,14 @@
 { pkgs, inputs, ... }:  
 
 let
-  pythonEnv310 = pkgs.python310.withPackages (pythonPackages: with pythonPackages; [
-    numpy
-    pandas
-    matplotlib
-    requests
-    pygobject3
-    pythonPackages.tkinter  # Explicitly add tkinter
-  ]);
+  # pythonEnv310 = pkgs.python310.withPackages (pythonPackages: with pythonPackages; [
+  #   numpy
+  #   pandas
+  #   matplotlib
+  #   requests
+  #   pygobject3
+  #   pythonPackages.tkinter  # Explicitly add tkinter
+  # ]);
 
   pythonEnv312 = pkgs.python312.withPackages (pythonPackages: with pythonPackages; [
     numpy
@@ -33,7 +33,7 @@ in
     lazygit
     gcc
     neovim
-    pythonEnv310
+    # pythonEnv310
     pythonEnv312
   ];
 }
