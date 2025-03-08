@@ -6,11 +6,11 @@
   programs.gamemode.enable = true;
 
   environment.systemPackages = with pkgs; [
-    steam
-    mangohud
-    protonup-qt
-    lutris
-    bottles
-    heroic
+    # steam
+    # mangohud
+    # protonup-qt
+    # lutris
+    # bottles
+    # heroic
   ];
 }
