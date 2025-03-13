@@ -16,14 +16,13 @@ let
     matplotlib
     requests
     pygobject3
-    pythonPackages.tkinter  # Explicitly add tkinter
+    # pythonPackages.tkinter  # Explicitly add tkinter
   ]);
 in
 {
   environment.systemPackages = with pkgs; [
     direnv
     postman
-    code-cursor
     nodejs
     docker
     pnpm
