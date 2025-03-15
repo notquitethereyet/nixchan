@@ -34,5 +34,6 @@ in
     neovim
     # pythonEnv310
     pythonEnv312
+    libreoffice-still
   ];
 }
