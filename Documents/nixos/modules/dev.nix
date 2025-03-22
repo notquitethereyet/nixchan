@@ -34,6 +34,7 @@ in
     neovim
     # pythonEnv310
     pythonEnv312
+    windsurf
     libreoffice-still
   ];
 }
