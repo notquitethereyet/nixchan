@@ -1,22 +1,12 @@
 { pkgs, inputs, ... }:  
 
 let
-  # pythonEnv310 = pkgs.python310.withPackages (pythonPackages: with pythonPackages; [
-  #   numpy
-  #   pandas
-  #   matplotlib
-  #   requests
-  #   pygobject3
-  #   pythonPackages.tkinter  # Explicitly add tkinter
-  # ]);
-
-  pythonEnv312 = pkgs.python312.withPackages (pythonPackages: with pythonPackages; [
+  pythonEnv311 = pkgs.python311.withPackages (pythonPackages: with pythonPackages; [
     numpy
     pandas
     matplotlib
     requests
     pygobject3
-    # pythonPackages.tkinter  # Explicitly add tkinter
   ]);
 in
 {
@@ -32,8 +22,7 @@ in
     lazygit
     gcc
     neovim
-    # pythonEnv310
-    pythonEnv312
+    pythonEnv311
     windsurf
     libreoffice-still
   ];

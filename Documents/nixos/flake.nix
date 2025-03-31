@@ -36,7 +36,7 @@
               home-manager.useUserPackages = true;
               home-manager.users.quiet.imports = [
                 ./hosts/nixchan/home.nix
-                catppuccin.homeManagerModules.catppuccin
+                catppuccin.homeModules.catppuccin
               ];
               home-manager.extraSpecialArgs = { inherit inputs; system = "x86_64-linux";};
             }
