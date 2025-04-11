@@ -22,14 +22,14 @@
     brave
   ];
 
-  programs.git = {
-    enable = true;
-    userName = "notquitethereyet";
-    userEmail = "arnav.panigrahi@gmail.com";
-    extraConfig = {
-        init.defaultBranch = "main";
-    };
-  };
+  # programs.git = {
+  #   enable = true;
+  #   userName = "notquitethereyet";
+  #   userEmail = "";
+  #   extraConfig = {
+  #       init.defaultBranch = "main";
+  #   };
+  # };
 
 
   # Catpussy thing
