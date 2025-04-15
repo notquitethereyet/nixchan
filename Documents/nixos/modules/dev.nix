@@ -16,7 +16,7 @@ in
     nodejs
     docker
     pnpm
-    github-desktop
+    # github-desktop
     vscode
     git
     lazygit
@@ -25,5 +25,6 @@ in
     pythonEnv311
     windsurf
     libreoffice-still
+    # python311Packages.uv  # Python package manager that's fast and supports virtualenvs
   ];
 }
