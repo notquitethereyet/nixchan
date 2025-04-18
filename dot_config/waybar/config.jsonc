@@ -2,7 +2,7 @@
   "layer": "top",
   "position": "bottom",
   "mod": "dock",
-  "height": 30,
+  "height": 32,
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
@@ -41,7 +41,18 @@
   "hyprland/workspaces": {
     "disable-scroll": true,
     "all-outputs": true,
-    "on-click": "activate"
+    "on-click": "activate",
+    "format": "{name}",
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "default": ""
+    },
+    "show-special": false,
+    "sort-by-number": true,
+    "persistent-workspaces": {
+      "*": 5 // up to 5 workspaces per monitor
+    }
   },
   "tray": {
     // "icon-size": 21,
@@ -52,7 +63,7 @@
     "rotate": 0,
     "format-icons": {
       "activated": "󰥔",
-      "deactivated": ""
+      "deactivated": ""
     }
   },
   "clock": {
@@ -84,7 +95,7 @@
 		"title-len": 50,
 		"justify": "center",
 		"tooltip": false,
-		"format": "<span foreground='#46c880'> </span> {artist} - {title}" 
+		"format": "<span foreground='#46c880'> </span> {artist} - {title}" 
 	},
   "backlight": {
     "format": "{icon}   {percent}%",
@@ -115,7 +126,7 @@
     ],
     "format-charging": "󰂄 {capacity}%",
     "format-warning": "󰂃 {capacity}%",
-    "format-plugged": " {capacity}%",
+    "format-plugged": " {capacity}%",
     "tooltip-format": "{capacity}%"
   },
   "network": {
@@ -127,7 +138,7 @@
     "tooltip-format": "Network: <big><b>{essid}</b></big>\nSignal strength: <b>{signaldBm}dBm ({signalStrength}%)</b>\nFrequency: <b>{frequency}MHz</b>\nInterface: <b>{ifname}</b>\nIP: <b>{ipaddr}/{cidr}</b>\nGateway: <b>{gwaddr}</b>\nNetmask: <b>{netmask}</b>",
     "format-linked": "󰈀 {ifname} (No IP)",
     "tooltip-format-disconnected": "Disconnected",
-    "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
+    "format-alt": "<span foreground='#99ffdd'> {bandwidthDownBytes}</span> <span foreground='#ffcc66'> {bandwidthUpBytes}</span>",
     "interval": 2
   },
   "custom/weather": {
@@ -146,14 +157,14 @@
   "pulseaudio": {
     "scroll-step": 5, // %, can be a float
     "format": "{icon}   {volume}",
-    "format-muted": " Muted",
+    "format-muted": " Muted",
     "on-click-right": "pavucontrol -t 3",
     "on-click": "volumecontrol.sh -o m",
     "format-icons": {
       "default": [
-        "",
-        "",
-        ""
+        "",
+        "",
+        ""
       ]
     },
     "tooltip-format": "{icon}   {desc}"
@@ -161,8 +172,8 @@
   "pulseaudio#microphone": {
     "format": "{format_source}",
     "rotate": 0,
-    "format-source": "",
-    "format-source-muted": "",
+    "format-source": "",
+    "format-source-muted": "",
     "on-click": "volumecontrol.sh -i m",
     "tooltip-format": "{format_source} {source_desc} // {source_volume}%",
     "scroll-step": 5

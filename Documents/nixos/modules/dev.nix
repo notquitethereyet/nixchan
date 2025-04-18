@@ -7,6 +7,7 @@ let
     matplotlib
     requests
     pygobject3
+    uv
   ]);
 in
 {
@@ -16,7 +17,6 @@ in
     nodejs
     docker
     pnpm
-    # github-desktop
     vscode
     git
     lazygit
