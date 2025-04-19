@@ -1,18 +1,15 @@
 { pkgs, inputs, ... }:  
 
 let
-  pythonEnv311 = pkgs.python311.withPackages (pythonPackages: with pythonPackages; [
-    numpy
-    pandas
-    matplotlib
-    requests
-    pygobject3
+  pythonEnv310 = pkgs.python311.withPackages (pythonPackages: with pythonPackages; [
+    pip
     uv
   ]);
 in
 {
   environment.systemPackages = with pkgs; [
     direnv
+    devenv
     postman
     nodejs
     docker
@@ -21,8 +18,7 @@ in
     git
     lazygit
     gcc
-    neovim
-    pythonEnv311
+    pythonEnv310
     windsurf
     libreoffice-still
     # python311Packages.uv  # Python package manager that's fast and supports virtualenvs
