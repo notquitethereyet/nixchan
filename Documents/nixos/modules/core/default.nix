@@ -7,10 +7,14 @@
   boot.loader.efi.canTouchEfiVariables = lib.mkDefault true;
   boot.loader.systemd-boot.configurationLimit = lib.mkDefault 10;
 
-  # Storage Optimization
-  nix.settings.auto-optimise-store = true;
-  nix.settings.experimental-features = ["nix-command" "flakes"];
 
+  # Nix settings
+  nix.settings = {
+    trusted-users = [ "root" "quiet" ];
+    auto-optimise-store = true;
+    experimental-features = ["nix-command" "flakes"];
+    # Add any other Nix settings here
+  };
   # Allow unfree packages by default (can be overridden)
   nixpkgs.config.allowUnfree = lib.mkDefault true;
 

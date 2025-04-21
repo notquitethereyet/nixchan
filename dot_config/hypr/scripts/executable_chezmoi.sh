@@ -5,7 +5,7 @@ files=(
     "/home/quiet/Documents/nixos"
     "/home/quiet/.face.icon"
     "/home/quiet/.weatherapikey"
-    "/home/quiet/vesktop.json"
+    "/home/quiet/vencord.json"
     "/home/quiet/.config/fastfetch"
     "/home/quiet/.config/kitty"
     "/home/quiet/.config/hypr"
