@@ -39,19 +39,13 @@
     "max-length": 25
   },
   "hyprland/workspaces": {
-    "disable-scroll": true,
-    "all-outputs": true,
-    "on-click": "activate",
     "format": "{name}",
-    "format-icons": {
-      "urgent": "",
-      "active": "",
-      "default": ""
-    },
-    "show-special": false,
+    "on-click": "activate",
+    "on-scroll-up": "hyprctl dispatch workspace e+1",
+    "on-scroll-down": "hyprctl dispatch workspace e-1",
     "sort-by-number": true,
     "persistent-workspaces": {
-      "*": 5 // up to 5 workspaces per monitor
+      "*": 5
     }
   },
   "tray": {
