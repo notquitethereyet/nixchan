@@ -1,4 +1,4 @@
-{ inputs, config, pkgs, ... }:
+{ inputs, config, pkgs, lib, ... }:
 {
 programs.zsh = {
 
@@ -28,7 +28,7 @@ programs.zsh = {
     la = "${pkgs.eza}/bin/eza -lbhHigmuSa --time-style=long-iso --git --color-scale --group-directories-first --icons";
     lx = "${pkgs.eza}/bin/eza -lbhHigmuSa@ --time-style=long-iso --git --color-scale --group-directories-first --icons";
     # lt = "${pkgs.eza}/bin/eza --tree --level=2 --group-directories-first --icons";
-    
+
     nixgit  = "/home/quiet/.config/hypr/scripts/chezmoi.sh";
     lsblk = "lsblk -o name,mountpoint,label,size,type,uuid";
 
@@ -51,7 +51,8 @@ programs.zsh = {
     # pia = "cd ~/Documents/PIA/ && sudo PIA_USER= PREFERRED_REGION= PIA_PASS= VPN_PROTOCOL=wireguard ./get_region.sh && cd -";
     # piad = "sudo wg-quick down pia";
   };
-  initExtraFirst = ''
+  initContent = lib.mkMerge [
+    (lib.mkBefore ''
       # show wives
       fastfetch
       # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
@@ -60,13 +61,14 @@ programs.zsh = {
     #   if [[ -r "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh" ]]; then
     #     source "''${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-''${(%):-%n}.zsh"
     #   fi
-  '';
-  initExtra = ''
+    '')
+    ''
     export PATH=$HOME/.local/bin:$PATH
     eval "$(zoxide init zsh)"
     eval "$(oh-my-posh init zsh --config $HOME/.config/ohmyposh/config.toml)"
     # eval "$(direnv hook zsh)"
-  '';
+    ''
+  ];
 
   zplug = {
     enable = true;
@@ -78,8 +80,6 @@ programs.zsh = {
       { name = "nix-community/nix-zsh-completions"; }
       { name = "zsh-users/zsh-history-substring-search"; }
       { name = "chrissicool/zsh-256color"; }
-      { name = ""; }
-
     ];
   };
 };

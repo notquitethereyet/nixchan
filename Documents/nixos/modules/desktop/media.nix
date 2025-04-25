@@ -15,6 +15,8 @@
     
     # Image viewers and editors
     imagemagick
+    # openshot-qt
+    libsForQt5.kdenlive
     
     # Streaming and recording
     obs-studio

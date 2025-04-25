@@ -16,7 +16,6 @@
 
     # Environment management
     direnv
-    devenv
 
     # Productivity
     windsurf

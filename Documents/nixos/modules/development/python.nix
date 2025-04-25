@@ -4,7 +4,6 @@
 let
   pythonEnv = pkgs.python311.withPackages (pythonPackages: with pythonPackages; [
     pip
-    uv
     # Add other Python packages here as needed
   ]);
 in
